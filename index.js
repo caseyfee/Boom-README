@@ -74,6 +74,13 @@ inquirer.prompt([
 
     ## Table of Contents: 
     ${data.description}
+    -[Description](#descritption)
+    -[Installation](#installation)
+    -[Technology](#technology)
+    -[Usage](#usage)
+    -[Contributing](#contributing)
+    -[Tests](#tests)
+    -[Questions](#questions)
 
     ## Installation: 
     ${data.installation}
