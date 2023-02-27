@@ -67,7 +67,7 @@ inquirer.prompt([
 
     fs.writeFileSync("README.md", 
     `
-    #Title: ${data.title}
+    # Title: ${data.title}
 
     ## Description: 
     ${data.description}
@@ -94,21 +94,23 @@ inquirer.prompt([
     ## Test Instructions: 
     ${data.test}
 
-    ##Questions, Comments, Good Recipes, Secrets?
+    ## Questions, Comments, Good Recipes, Secrets?
     Contact me , please ------
     -gitHub username: ${data.gitHub} 
     -gitHub profile: https://github.com/${data.gitHub}
     -Email: ${data.email}
 
 
-    ##License:
+    ## License:
     
     ![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
     
-    `
-    )
-}   
-); 
+    ## Video Walkthrough
+    [Insert Here]
+
+
+    `)
+}); 
 
 // TODO: Create a function to initialize app
 // function init() {}

@@ -1,11 +1,11 @@
 
-    #Title: 1
+    #Title: Boom-README
 
     ## Description: 
-    a
+    Please enjoy this quick an easy solution
 
     ## Table of Contents: 
-    a
+    Please enjoy this quick an easy solution
     -[Description](#descritption)
     -[Installation](#installation)
     -[Technology](#technology)
@@ -15,22 +15,22 @@
     -[Questions](#questions)
 
     ## Installation: 
-    undefined
+    boom
 
     ## Usage: 
-    c
+    Nothing now
 
     ## Credits: 
-    e
+    Yes
 
     ## Test Instructions: 
-    f
+    No
 
     ##Questions, Comments, Good Recipes, Secrets?
     Contact me , please ------
-    -gitHub username: g 
-    -gitHub profile: https://github.com/g
-    -Email: h
+    -gitHub username: casey 
+    -gitHub profile: https://github.com/casey
+    -Email: casey
 
 
     ##License:
