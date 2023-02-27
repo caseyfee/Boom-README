@@ -14,63 +14,94 @@ inquirer.prompt([
         name: "description",
         message: "What would you like to include in the README Description?", 
     },
-//     {   type: "input",
-//         name: "instructions",
-//         message: "What are the installation instructions?", 
-//    },
-//     {   type: "input",
-//         name: "usage",
-//         message: "What usage information would you like to include?", 
+    {   type: "input",
+        name: "instructions",
+        message: "What are the installation instructions?", 
+   },
+    {   type: "input",
+        name: "usage",
+        message: "What usage information would you like to include?", 
         
-//     },
-//     {   type: "input",
-//         name: "contribution",
-//         message: "What are the contribution guidelines?", 
+    },
+    {   type: "input",
+        name: "contribution",
+        message: "What are the contribution guidelines?", 
         
-//     },
-//     {   type: "input",
-//         name: "instructions",
-//         message: "What are the test instructions?", 
-//     },
-//     {   type: "list",  
-//         name: "license",
-//         message: "What license would you like to use?", 
-//         choices: ["MIT", "ISC", "None"],
+    },
+    {   type: "input",
+        name: "credits",
+        message: "Anyone you'd like to credit?", 
         
-//     },
-//     {   type: "input",
-//         name: "gitHub",
-//         message: "What is your gitHub username?", 
-//     },
-//     {   type: "input",
-//         name: "email",
-//         message: "What is your email?", 
-//     },  
+    },
+    {   type: "input",
+        name: "test",
+        message: "What are the test instructions?", 
+    },
+    {   type: "list",  
+        name: "license",
+        message: "What license would you like to use?", 
+        choices: ["MIT", "ISC", "None"],
+        
+    },
+    {   type: "input",
+        name: "gitHub",
+        message: "What is your gitHub username?", 
+    },
+    {   type: "input",
+        name: "email",
+        message: "What is your email?", 
+    },  
 ])
-.then((data) => {
-    console.log(data);
-
-    
-    const filename = `${data.title.toLowerCase().split(' ').join('')}.json`;
-
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('filename created!')
-    );
-    writeToFile(data);
-}   
-); 
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(data) {
+.then((data) => {
+    console.log(data);
+    
+    // var icon = `https://img.shields.io/badge/license-${data.license}-brightgreen`
 
-    return `
-    # ${data.name}`
-  
+    // var iconHTML = ``
+
+    // $('#fiveDayContainer').html(iconHTML);
+
+    fs.writeFileSync("README.md", 
+    `
+    #Title: ${data.title}
+
+    ## Description: 
+    ${data.description}
+
+    ## Table of Contents: 
+    ${data.description}
+
+    ## Installation: 
+    ${data.installation}
+
+    ## Usage: 
+    ${data.usage}
+
+    ## Credits: 
+    ${data.credits}
+
+    ## Test Instructions: 
+    ${data.test}
+
+    ##Questions, Comments, Good Recipes, Secrets?
+    Contact me , please ------
+    -gitHub username: ${data.gitHub} 
+    -gitHub profile: https://github.com/${data.gitHub}
+    -Email: ${data.email}
 
 
-}
+    ##License:
+    
+    ![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
+    
+    `
+    );
+}   
+); 
 
 // TODO: Create a function to initialize app
 // function init() {}
