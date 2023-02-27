@@ -73,7 +73,6 @@ inquirer.prompt([
 ${data.description}
 
 ## Table of Contents: 
-${data.description}
 -[Description](#descritption)
 -[Installation](#installation)
 -[Technology](#technology)
@@ -96,18 +95,16 @@ ${data.test}
 
 ## Questions, Comments, Good Recipes, Secrets?
 Contact me , please ------
-    -gitHub username: ${data.gitHub} 
-    -gitHub profile: https://github.com/${data.gitHub}
-    -Email: ${data.email}
+-gitHub username: ${data.gitHub} 
+-gitHub profile: https://github.com/${data.gitHub}
+-Email: ${data.email}
 
-
-    ## License:
+## License:
     
-    ![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
+![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
     
-    ## Video Walkthrough
-    [Insert Here]
-
+## Video Walkthrough
+[Insert Here]
 
     `)
 }); 
