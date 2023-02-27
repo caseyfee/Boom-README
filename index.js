@@ -67,35 +67,35 @@ inquirer.prompt([
 
     fs.writeFileSync("README.md", 
     `
-    # Title: ${data.title}
+# Title: ${data.title}
 
-    ## Description: 
-    ${data.description}
+## Description: 
+${data.description}
 
-    ## Table of Contents: 
-    ${data.description}
-    -[Description](#descritption)
-    -[Installation](#installation)
-    -[Technology](#technology)
-    -[Usage](#usage)
-    -[Contributing](#contributing)
-    -[Tests](#tests)
-    -[Questions](#questions)
+## Table of Contents: 
+${data.description}
+-[Description](#descritption)
+-[Installation](#installation)
+-[Technology](#technology)
+-[Usage](#usage)
+-[Contributing](#contributing)
+-[Tests](#tests)
+-[Questions](#questions)
 
-    ## Installation: 
-    ${data.instructions}
+## Installation: 
+${data.instructions}
 
-    ## Usage: 
-    ${data.usage}
+## Usage: 
+${data.usage}
 
-    ## Credits: 
-    ${data.credits}
+## Credits: 
+${data.credits}
 
-    ## Test Instructions: 
-    ${data.test}
+## Test Instructions: 
+${data.test}
 
-    ## Questions, Comments, Good Recipes, Secrets?
-    Contact me , please ------
+## Questions, Comments, Good Recipes, Secrets?
+Contact me , please ------
     -gitHub username: ${data.gitHub} 
     -gitHub profile: https://github.com/${data.gitHub}
     -Email: ${data.email}
