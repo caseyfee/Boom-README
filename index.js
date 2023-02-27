@@ -83,7 +83,7 @@ inquirer.prompt([
     -[Questions](#questions)
 
     ## Installation: 
-    ${data.installation}
+    ${data.instructions}
 
     ## Usage: 
     ${data.usage}
@@ -106,7 +106,7 @@ inquirer.prompt([
     ![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
     
     `
-    );
+    )
 }   
 ); 
 
