@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 
-// nodemon??
 
 // TODO: Create an array of questions for user input
 inquirer.prompt([
@@ -53,33 +52,32 @@ inquirer.prompt([
     },  
 ])
 
-
-
 // TODO: Create a function to write README file
 .then((data) => {
     console.log(data);
-    
-    // var icon = `https://img.shields.io/badge/license-${data.license}-brightgreen`
-
-    // var iconHTML = ``
-
-    // $('#fiveDayContainer').html(iconHTML);
+    data.license === "None" ? data.license = "None" : data.license
+      console.log(data.license)
 
     fs.writeFileSync("README.md", 
     `
+      
+
 # Title: ${data.title}
+
+## License:
+    
+![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
 
 ## Description: 
 ${data.description}
 
 ## Table of Contents: 
--[Description](#descritption)
--[Installation](#installation)
--[Technology](#technology)
--[Usage](#usage)
--[Contributing](#contributing)
--[Tests](#tests)
--[Questions](#questions)
+-[Description](#descritption) \n
+-[Installation](#installation) \n
+-[Usage](#usage) \n
+-[Credits](#Credits) \n
+-[Test Instructionrs](#contributing) \n
+-[Questions](#questions) \n
 
 ## Installation: 
 ${data.instructions}
@@ -95,14 +93,11 @@ ${data.test}
 
 ## Questions, Comments, Good Recipes, Secrets?
 Contact me , please ------
--gitHub username: ${data.gitHub} 
--gitHub profile: https://github.com/${data.gitHub}
+-gitHub username: ${data.gitHub} \n
+-gitHub profile: https://github.com/${data.gitHub} \n
 -Email: ${data.email}
 
-## License:
-    
-![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
-    
+#
 ## Video Walkthrough
 [Insert Here]
 
