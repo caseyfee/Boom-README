@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
+const { listenerCount } = require('process');
 
 
 // Array of questions inside inquirer.prompt
@@ -55,17 +56,23 @@ inquirer.prompt([
 
 .then((data) => {
     console.log(data);
-    data.license === "None" ? data.license = "None" : data.license
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+   var licenseChoice = data.license;
+// If an arrow function only has one parameter, we can omit the parens () around the single parameter
+var license = licenseChoice => licenseChoice === "None" ? 
+
+licenseChoice = "" : `![${licenseChoice}](https://img.shields.io/badge/license-${licenseChoice}-brightgreen)`; 
+
       console.log(data.license)
 // A function to write README file
     fs.writeFileSync("README.md", 
     `
-
 # Title: ${data.title}
 
 ## License:
     
-![${data.license}](https://img.shields.io/badge/license-${data.license}-brightgreen)
+${license()}
 
 ## Description: 
 ${data.description}
