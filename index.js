@@ -60,8 +60,7 @@ inquirer.prompt([
 
     fs.writeFileSync("README.md", 
     `
-      
-
+    
 # Title: ${data.title}
 
 ## License:
@@ -92,7 +91,7 @@ ${data.credits}
 ${data.test}
 
 ## Questions, Comments, Good Recipes, Secrets?
-Contact me , please ------
+Contact me , please ------ \n
 -gitHub username: ${data.gitHub} \n
 -gitHub profile: https://github.com/${data.gitHub} \n
 -Email: ${data.email}
@@ -104,8 +103,3 @@ Contact me , please ------
     `)
 }); 
 
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
