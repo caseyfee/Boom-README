@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require("fs");
 
 
-// TODO: Create an array of questions for user input
+// Array of questions inside inquirer.prompt
 inquirer.prompt([
     {   type: "input",
         name: "title",
@@ -52,15 +52,15 @@ inquirer.prompt([
     },  
 ])
 
-// TODO: Create a function to write README file
+
 .then((data) => {
     console.log(data);
     data.license === "None" ? data.license = "None" : data.license
       console.log(data.license)
-
+// A function to write README file
     fs.writeFileSync("README.md", 
     `
-    
+
 # Title: ${data.title}
 
 ## License:
@@ -71,11 +71,11 @@ inquirer.prompt([
 ${data.description}
 
 ## Table of Contents: 
--[Description](#descritption) \n
+-[Description](#description) \n
 -[Installation](#installation) \n
 -[Usage](#usage) \n
--[Credits](#Credits) \n
--[Test Instructionrs](#contributing) \n
+-[Credits](#credits) \n
+-[Test](#test) \n
 -[Questions](#questions) \n
 
 ## Installation: 
@@ -87,11 +87,11 @@ ${data.usage}
 ## Credits: 
 ${data.credits}
 
-## Test Instructions: 
+## Test: 
 ${data.test}
 
-## Questions, Comments, Good Recipes, Secrets?
-Contact me , please ------ \n
+## Questions
+Contact me: \n
 -gitHub username: ${data.gitHub} \n
 -gitHub profile: https://github.com/${data.gitHub} \n
 -Email: ${data.email}
