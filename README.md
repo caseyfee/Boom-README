@@ -21,6 +21,6 @@ Contact me:
 -Email: caseyfee3@gmail.com
 
 ## Video Walkthrough
-[Insert Here]
+https://drive.google.com/file/d/1jcit9Fj2_nQDxLFQCXj0GXrlDCCTSvG9/view
 
     

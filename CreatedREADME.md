@@ -1,10 +1,10 @@
 
-# Title: a
+# Title: Title
   
-![ISC](https://img.shields.io/badge/license-ISC-brightgreen) 
+![MIT](https://img.shields.io/badge/license-MIT-brightgreen) 
 
 ## Description: 
-    b
+    Description
 
 ## Table of Contents: 
 - [Description](#description) 
@@ -16,28 +16,28 @@
 - [Questions](#questions) 
 
 ## Installation: 
-    c
+    Install
 
 ## Usage: 
-    d
+    Usage
 
 ## Credits: 
-    f
+    Yes - tutor, classmates, youtubers
 
 ## Test: 
-    g
+    Test
  
  ## License: 
-        The license chosen was ISC. 
+        The license chosen was MIT. 
  
     
 ## Questions
 Contact me: 
 
-    -gitHub username: i 
+    -gitHub username: caseyfee 
 
-    -gitHub profile: https://github.com/i 
+    -gitHub profile: https://github.com/caseyfee 
 
-    -Email: j
+    -Email: caseyfee
 
     
