@@ -1,8 +1,6 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-// const { listenerCount } = require('process');
-
 
 // Array of questions inside inquirer.prompt
 inquirer.prompt([
@@ -55,16 +53,12 @@ inquirer.prompt([
 
 
 .then((data) => {
-    // console.log(data);
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-//    var licenseChoice = data.license;
-// If an arrow function only has one parameter, we can omit the parens () around the single parameter
-    //   console.log(data.license)
+
 // A function to write README file
     fs.writeFileSync("CreatedREADME.md", generateREADME(data))
 });
 
+// License functions
 function licenseBadge(licenseChoice) {
     return (licenseChoice === "None") ? "" : `![${licenseChoice}](https://img.shields.io/badge/license-${licenseChoice}-brightgreen) \n`; 
 }
@@ -80,6 +74,7 @@ function licenseTOC(licenseChoice){
     `;
  }
 
+//  Populating the created README file
 function generateREADME(data) {
     return `
 # Title: ${data.title}
