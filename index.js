@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const { listenerCount } = require('process');
+// const { listenerCount } = require('process');
 
 
 // Array of questions inside inquirer.prompt
@@ -55,58 +55,65 @@ inquirer.prompt([
 
 
 .then((data) => {
-    console.log(data);
+    // console.log(data);
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-   var licenseChoice = data.license;
+//    var licenseChoice = data.license;
 // If an arrow function only has one parameter, we can omit the parens () around the single parameter
-var license = licenseChoice => licenseChoice === "None" ? 
-
-licenseChoice = "" : `![${licenseChoice}](https://img.shields.io/badge/license-${licenseChoice}-brightgreen)`; 
-
-      console.log(data.license)
+    //   console.log(data.license)
 // A function to write README file
-    fs.writeFileSync("README.md", 
-    `
+    fs.writeFileSync("CreatedREADME.md", generateREADME(data))
+});
+
+function licenseBadge(licenseChoice) {
+    return (licenseChoice === "None") ? "" : `![${licenseChoice}](https://img.shields.io/badge/license-${licenseChoice}-brightgreen) \n`; 
+}
+
+function licenseTOC(licenseChoice){ 
+    return (licenseChoice === "None") ? "" : `\n- [License](#license) `;
+ }
+
+ function licenseNotice(licenseChoice){ 
+    return (licenseChoice === "None") ? "" : 
+    ` \n ## License: 
+        The license chosen was ${licenseChoice}. \n 
+    `;
+ }
+
+function generateREADME(data) {
+    return `
 # Title: ${data.title}
-
-## License:
-    
-${license()}
-
+  
+${licenseBadge(data.license)}
 ## Description: 
-${data.description}
+    ${data.description}
 
 ## Table of Contents: 
--[Description](#description) \n
--[Installation](#installation) \n
--[Usage](#usage) \n
--[Credits](#credits) \n
--[Test](#test) \n
--[Questions](#questions) \n
+- [Description](#description) 
+- [Installation](#installation)
+- [Usage](#usage) 
+- [Credits](#credits) 
+- [Test](#test) ${licenseTOC(data.license)}
+- [Questions](#questions) 
 
 ## Installation: 
-${data.instructions}
+    ${data.instructions}
 
 ## Usage: 
-${data.usage}
+    ${data.usage}
 
 ## Credits: 
-${data.credits}
+    ${data.credits}
 
 ## Test: 
-${data.test}
-
+    ${data.test}
+${licenseNotice(data.license)}
 ## Questions
 Contact me: \n
--gitHub username: ${data.gitHub} \n
--gitHub profile: https://github.com/${data.gitHub} \n
--Email: ${data.email}
+    -gitHub username: ${data.gitHub} \n
+    -gitHub profile: https://github.com/${data.gitHub} \n
+    -Email: ${data.email}
 
-#
-## Video Walkthrough
-[Insert Here]
-
-    `)
-}); 
+    `
+}
 

@@ -1,49 +1,25 @@
 
-# Title: o
-
-## License:
-    
-![undefined](https://img.shields.io/badge/license-undefined-brightgreen)
+# Title: Boom-README
 
 ## Description: 
-n
+This project was created to enable a user to quickly and easily generate a README file by using a command-line. This allows the project creator to devote more time working on the project. This code package used inquirer, fs methods, npm, an understanding of node_modules, and so much more.
 
 ## Table of Contents: 
--[Description](#description) 
-
--[Installation](#installation) 
-
--[Usage](#usage) 
-
--[Credits](#credits) 
-
--[Test](#test) 
-
--[Questions](#questions) 
-
-
-## Installation: 
-e
-
-## Usage: 
-m
+- [Description](#description) 
+- [Credits](#credits) 
+- [Questions](#questions) 
 
 ## Credits: 
-r
-
-## Test: 
-t
+Thanks to my tutor - Dominique Meeks Gombe, classmates, and the youtubers out there!
 
 ## Questions
 Contact me: 
+-gitHub username: caseyfee
 
--gitHub username: r 
+-gitHub profile: https://github.com/caseyfee 
 
--gitHub profile: https://github.com/r 
+-Email: caseyfee3@gmail.com
 
--Email: y
-
-#
 ## Video Walkthrough
 [Insert Here]
 
